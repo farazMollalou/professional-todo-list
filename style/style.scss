@@ -33,6 +33,7 @@
             width: 100%;
             height: 100%;
             @include flex(c);
+            justify-content: flex-start;
             gap: 12px;
             overflow-y: auto;
             padding: 10px 0;
@@ -48,10 +49,6 @@
                 background-color: #fffaf4;
                 border-radius: 10px;
                 box-shadow: 2px 2px 5px #c1c1c1;
-
-                &:nth-child(1) {
-                    margin-top: 180px;
-                }
 
                 &-title {
                     width: 60%;
