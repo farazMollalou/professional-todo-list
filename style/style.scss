@@ -1,0 +1,155 @@
+@import "general";
+
+.todo-list-wrapper {
+    width: 600px;
+    border-radius: 20px;
+    background-color: $blue_30;
+
+    .header {
+        width: 100%;
+        height: 120px;
+        padding-bottom: 40px;
+        background-color: $blue_30;
+        @include flex();
+        border-radius: 20px 20px 0 0;
+
+        &-title {
+            color: #fff;
+            font-size: 24px;
+            font-family: gandom;
+        }
+    }
+
+    .body {
+        width: 90%;
+        height: 500px;
+        background-color: $blue_10;
+        border-radius: inherit;
+        position: relative;
+        bottom: 40px;
+        margin: 0 auto;
+
+        .task-list {
+            width: 100%;
+            height: 100%;
+            @include flex(c);
+            gap: 12px;
+            overflow-y: auto;
+            padding: 10px 0;
+            padding-bottom: 20px;
+
+            .task {
+                @include flex();
+                direction: rtl;
+                height: 50px;
+                width: 90%;
+                gap: 30px;
+                padding: 0 14px;
+                background-color: #fffaf4;
+                border-radius: 10px;
+                box-shadow: 2px 2px 5px #c1c1c1;
+
+                &:nth-child(1) {
+                    margin-top: 180px;
+                }
+
+                &-title {
+                    width: 60%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-weight: 600;
+                }
+
+                // done status code start 
+                &.done {
+                    background-color: #dedede;
+                    color: gray;
+
+                    .task-title {
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 2px;
+                            border-radius: 10px;
+                            background-color: #999999;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: rotate(-4deg) translateY(-50%);
+                        }
+                    }
+                }
+
+                // done status code end
+
+                .action-btn-box {
+                    @include flex();
+                    width: 35%;
+                    height: 50px;
+                    gap: 14px;
+
+                    i {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 10px;
+                        color: #fff;
+                        @include flex();
+                        cursor: pointer;
+
+                        &:nth-child(1) {
+                            background: linear-gradient(30deg, $blue_50, $blue_30);
+                        }
+
+                        &:nth-child(2) {
+                            background: linear-gradient(30deg, #ff6200, #ffae00);
+                        }
+
+                        &:nth-child(3) {
+                            background: linear-gradient(30deg, #e8001b, #c50000);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .add-part {
+        width: 100%;
+        height: 70px;
+        @include flex();
+        gap: 10px;
+        background-color: #ffae00;
+        border-radius: 0 0 20px 20px;
+
+        .task-input {
+            width: 70%;
+            height: 45px;
+            direction: rtl;
+            text-align: center;
+            font-family: gandom;
+            outline: none;
+            border: none;
+            padding: 10px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 19px;
+
+            &::placeholder {
+                font-weight: 500;
+                color: #999999;
+            }
+        }
+        i {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            @include flex();
+            font-size: 24px;
+            color: #fff;
+            background: radial-gradient(#5f009f, #310043);
+        }
+    }
+}

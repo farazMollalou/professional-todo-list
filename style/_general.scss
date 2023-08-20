@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex($dir: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @if ($dir == c) {
+        flex-direction: column;
+    }
+}
+
+@font-face {
+    font-family: 'gandom';
+    src: url('../fonts/Gandom.ttf') format("truetype");
+}
+
+$blue_90: #06001a;
+$blue_70: #11004d;
+$blue_50: #000080;
+$blue_30: #1717e6;
+$blue_10: #d6d6ff;
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    &-thumb {
+        background-color: #000080;
+        border-radius: 10px;
+    }
+}
+
+body {
+    @include flex();
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: gandom;
+    background: linear-gradient(20deg, $blue_90, $blue_50);
+}

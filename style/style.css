@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "gandom";
+  src: url("../fonts/Gandom.ttf") format("truetype");
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #000080;
+  border-radius: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: gandom;
+  padding: 30px 0;
+  background: linear-gradient(20deg, #06001a, #000080);
+}
+
+.todo-list-wrapper {
+  width: 600px;
+  border-radius: 20px;
+  background-color: #1717e6;
+}
+.todo-list-wrapper .header {
+  width: 100%;
+  height: 120px;
+  padding-bottom: 40px;
+  background-color: #1717e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+}
+.todo-list-wrapper .header-title {
+  color: #fff;
+  font-size: 24px;
+  font-family: gandom;
+}
+.todo-list-wrapper .body {
+  width: 90%;
+  height: 500px;
+  background-color: #d6d6ff;
+  border-radius: inherit;
+  position: relative;
+  bottom: 40px;
+  margin: 0 auto;
+}
+.todo-list-wrapper .body .task-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding: 10px 0;
+  padding-bottom: 20px;
+}
+.todo-list-wrapper .body .task-list .task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+  height: 50px;
+  width: 90%;
+  gap: 30px;
+  padding: 0 14px;
+  background-color: #fffaf4;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #c1c1c1;
+}
+.todo-list-wrapper .body .task-list .task:nth-child(1) {
+  margin-top: 180px;
+}
+.todo-list-wrapper .body .task-list .task-title {
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+.todo-list-wrapper .body .task-list .task.done {
+  background-color: #dedede;
+  color: gray;
+}
+.todo-list-wrapper .body .task-list .task.done .task-title {
+  position: relative;
+}
+.todo-list-wrapper .body .task-list .task.done .task-title::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #999999;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: rotate(-4deg) translateY(-50%);
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 50px;
+  gap: 14px;
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box i {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(1) {
+  background: linear-gradient(30deg, #000080, #1717e6);
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(2) {
+  background: linear-gradient(30deg, #ff6200, #ffae00);
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(3) {
+  background: linear-gradient(30deg, #e8001b, #c50000);
+}
+.todo-list-wrapper .add-part {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffae00;
+  border-radius: 0 0 20px 20px;
+}
+.todo-list-wrapper .add-part .task-input {
+  width: 70%;
+  height: 45px;
+  direction: rtl;
+  text-align: center;
+  font-family: gandom;
+  outline: none;
+  border: none;
+  padding: 10px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 19px;
+}
+.todo-list-wrapper .add-part .task-input::placeholder {
+  font-weight: 500;
+  color: #999999;
+}
+.todo-list-wrapper .add-part i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  background: radial-gradient(#5f009f, #310043);
+}/*# sourceMappingURL=style.css.map */
