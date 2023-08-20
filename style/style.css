@@ -200,4 +200,158 @@ body {
   font-size: 20px;
   color: #060047;
   background: radial-gradient(#ecdd08, #ffd500);
+}
+
+.modal-bg {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(91, 91, 91, 0.5254901961);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.modal-bg .new-task-info-container {
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: #fffaf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 0;
+}
+.modal-bg .new-task-info-container .new-task-title {
+  padding-bottom: 5px;
+  text-align: center;
+  width: 90%;
+  border-bottom: 3px solid #370068;
+}
+.modal-bg .new-task-info-container .new-task-form {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-start;
+}
+.modal-bg .new-task-info-container .new-task-form .new-task-input {
+  border: none;
+  outline: none;
+  width: 80%;
+  direction: rtl;
+  text-align: center;
+  font-family: gandom;
+  background-color: #cecece;
+  border-radius: 10px;
+  min-height: 35px;
+  padding: 7px 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-bg .new-task-info-container .new-task-form .new-task-input::placeholder {
+  font-weight: 500;
+}
+.modal-bg .new-task-info-container .new-task-form .new-task-input:focus {
+  background-color: #e3e3e3;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box {
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  direction: rtl;
+  gap: 50px;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .box-title {
+  font-size: 22px;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  transform: translateY(20px);
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0 10px;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 19px;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item.selected {
+  background-color: #dddddd;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item:nth-child(2) {
+  transform: translateX(-35px);
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item:nth-child(3) {
+  transform: translateX(-70px);
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item .color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item .color.red {
+  border-color: red;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item .color.gold {
+  border-color: #ffc400;
+}
+.modal-bg .new-task-info-container .new-task-form .priority-box .priority-items .item .color.green {
+  border-color: #00ff22;
+}
+.modal-bg .new-task-info-container .new-task-form .description-container {
+  width: 90%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  direction: rtl;
+}
+.modal-bg .new-task-info-container .new-task-form .description-container .description-box {
+  width: 100%;
+  border: 2px groove silver;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+  font-family: gandom;
+  line-height: 30px;
+  outline: none;
+}
+.modal-bg .new-task-info-container .new-task-form .add-btn {
+  width: 200px;
+  height: 32px;
+  border: none;
+  border-radius: 10px;
+  font-family: gandom;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  background: linear-gradient(30deg, #005818, #01bc07);
 }/*# sourceMappingURL=style.css.map */
