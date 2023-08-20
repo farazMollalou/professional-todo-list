@@ -9,13 +9,14 @@
   src: url("../fonts/Gandom.ttf") format("truetype");
 }
 ::-webkit-scrollbar {
-  width: 10px;
-  background-color: #fff;
+  width: 15px;
+  background: linear-gradient(to bottom, #a3a3f3, #c1c1d6);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #000080;
   border-radius: 10px;
+  border: 2px solid #c1c1d6;
 }
 
 body {
@@ -37,11 +38,13 @@ body {
 .todo-list-wrapper .header {
   width: 100%;
   height: 120px;
-  padding-bottom: 40px;
   background-color: #1717e6;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  padding-bottom: 40px;
   border-radius: 20px 20px 0 0;
 }
 .todo-list-wrapper .header-title {
@@ -49,10 +52,29 @@ body {
   font-size: 24px;
   font-family: gandom;
 }
+.todo-list-wrapper .header .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 14px;
+}
+.todo-list-wrapper .header .options i {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #11004d;
+  font-size: 22px;
+  background-color: #ffe063;
+  cursor: pointer;
+}
 .todo-list-wrapper .body {
   width: 90%;
   height: 500px;
-  background-color: #d6d6ff;
+  background-color: #FDF4F5;
   border-radius: inherit;
   position: relative;
   bottom: 40px;
@@ -66,30 +88,43 @@ body {
   justify-content: center;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 15px;
   overflow-y: auto;
-  padding: 10px 0;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 .todo-list-wrapper .body .task-list .task {
   display: flex;
   align-items: center;
   justify-content: center;
   direction: rtl;
-  height: 50px;
   width: 90%;
   gap: 30px;
   padding: 0 14px;
   background-color: #fffaf4;
   border-radius: 10px;
   box-shadow: 2px 2px 5px #c1c1c1;
+  position: relative;
 }
 .todo-list-wrapper .body .task-list .task-title {
   width: 60%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
+  font-weight: 500;
+  cursor: default;
+  padding-right: 10px;
+}
+.todo-list-wrapper .body .task-list .task.vital {
+  border: 3px solid #c20000;
+  box-shadow: 3px 3px 5px #f42e2e;
+}
+.todo-list-wrapper .body .task-list .task.important {
+  border: 5px solid #ffcc00;
+  box-shadow: 4px 4px 5px #ff9059;
+}
+.todo-list-wrapper .body .task-list .task.normal {
+  border: 3px solid #2fcb00;
+  box-shadow: 2px 2px 5px #01bc07;
 }
 .todo-list-wrapper .body .task-list .task.done {
   background-color: #dedede;
@@ -113,9 +148,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35%;
-  height: 50px;
-  gap: 14px;
+  width: 30%;
+  height: 60px;
+  gap: 10px;
 }
 .todo-list-wrapper .body .task-list .task .action-btn-box i {
   width: 30px;
@@ -131,46 +166,38 @@ body {
   background: linear-gradient(30deg, #000080, #1717e6);
 }
 .todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(2) {
-  background: linear-gradient(30deg, #ff6200, #ffae00);
+  background: linear-gradient(30deg, #005818, #29a400);
 }
 .todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(3) {
+  background: linear-gradient(30deg, #ff6200, #ffae00);
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(4) {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
   background: linear-gradient(30deg, #e8001b, #c50000);
 }
-.todo-list-wrapper .add-part {
+.todo-list-wrapper .footer {
   width: 100%;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background-color: #ffae00;
+  gap: 30px;
+  border-top: 2px solid gold;
+  background-color: #370068;
   border-radius: 0 0 20px 20px;
 }
-.todo-list-wrapper .add-part .task-input {
-  width: 70%;
+.todo-list-wrapper .footer i {
+  width: 45px;
   height: 45px;
-  direction: rtl;
-  text-align: center;
-  font-family: gandom;
-  outline: none;
-  border: none;
-  padding: 10px 7px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 19px;
-}
-.todo-list-wrapper .add-part .task-input::placeholder {
-  font-weight: 500;
-  color: #999999;
-}
-.todo-list-wrapper .add-part i {
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  color: #fff;
-  background: radial-gradient(#5f009f, #310043);
+  cursor: pointer;
+  font-size: 20px;
+  color: #060047;
+  background: radial-gradient(#ecdd08, #ffd500);
 }/*# sourceMappingURL=style.css.map */

@@ -25,13 +25,14 @@ $blue_30: #1717e6;
 $blue_10: #d6d6ff;
 
 ::-webkit-scrollbar {
-    width: 10px;
-    background-color: #fff;
+    width: 15px;
+    background: linear-gradient(to bottom, #a3a3f3, #c1c1d6);
     border-radius: 10px;
 
     &-thumb {
         background-color: #000080;
         border-radius: 10px;
+        border: 2px solid #c1c1d6
     }
 }
 
