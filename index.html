@@ -21,38 +21,40 @@
         </div>
         <div class="body">
             <div class="task-list">
-                <!-- <div class="task done">
-                    <span class="task-title">برنامه نویسی جاوا، هفته آینده امتحان خواهیم داشت از مطالب oop و همچنین حلقه
-                        ها</span>
-                    <div class="action-btn-box">
-                        <i class="btn fa fa-check"></i>
-                        <i class="btn fa fa-eye"></i>
-                        <i class="btn fa fa-pen"></i>
-                        <i class="btn fa fa-times"></i>
-                    </div>
-                </div> -->
                 <div class="task vital">
                     <i class="btn fa fa-check"></i>
                     <span class="task-title">آزمون راهنمایی و رانندگی</span>
                     <i class="fa fa-cog"></i>
                     <div class="action-btn-box">
+                        <i class="btn fa fa-eraser"></i>
                         <i class="btn fa fa-eye"></i>
                         <i class="btn fa fa-pen"></i>
-                        <i class="btn fa fa-times"></i>
+                        <i class="btn fa fa-times" id="actions-close-btn"></i>
+                    </div>
+                </div>
+                <div class="task normal">
+                    <i class="btn fa fa-check"></i>
+                    <span class="task-title">آزمون راهنمایی و رانندگی</span>
+                    <i class="fa fa-cog"></i>
+                    <div class="action-btn-box">
+                        <i class="btn fa fa-eraser"></i>
+                        <i class="btn fa fa-eye"></i>
+                        <i class="btn fa fa-pen"></i>
+                        <i class="btn fa fa-times" id="actions-close-btn"></i>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer">
-            <i class="fa fa-file-alt"></i>
-            <i class="fa fa-plus"></i>
+            <i class="fa fa-file-alt" id="daily_note_btn"></i>
+            <i class="fa fa-plus" id="add_new_task_btn"></i>
             <i class="fa fa-eraser"></i>
         </div>
     </div>
 
     <div class="modal-bg">
-        <div class="new-task-info-container">
-            <i class="close-btn fa fa-times"></i>
+        <div class="modal_content new-task-info-container">
+            <i class="close-btn fa fa-times modal_closer"></i>
             <h2 class="new-task-title">اطلاعات تسک جدید</h2>
             <form class="new-task-form">
                 <input type="text" class="new-task-input" placeholder="عنوان تسک جدید را بنویسید..." maxlength="25">
@@ -80,7 +82,22 @@
                 <button class="add-btn">افزودن</button>
             </form>
         </div>
+
+        <div class="modal_content daily-note">
+            <i class="close-btn fa fa-times modal_closer"></i>
+            <img src="./image/note.png" alt="note">
+            <h3 class="note-title">یادداشت امروز من</h3>
+            <p class="note">
+                فراز ملالو دانشجوی کارشناسی مهندسی کامپیوتر – نرم‌افزار از دانشگاه تبریز هستند. ایشان در سال‌های اخیر
+                تجربه کار با زبان‌های برنامه‌نویسی جاوا و C و زبان توصیف سخت‌افزار Verilog را دارند. تمرکز ایشان در حال
+                حاضر بر روی برنامه‌نویسی فرانت اند و توسعه سایت‌های SPA با کتابخانه React JS است. برنامه‌نویسی فرانت،
+                تدریس و تولید محتوا در زمینه برنامه‌نویسی و طراحی سایت از زمینه‌های آموزشی و پژوهشی ایشان محسوب می‌شود.
+            </p>
+            <textarea cols="30"
+                rows="10">فراز ملالو دانشجوی کارشناسی مهندسی کامپیوتر – نرم‌افزار از دانشگاه تبریز هستند. ایشان در سال‌های اخیر تجربه کار با زبان‌های برنامه‌نویسی جاوا و C و زبان توصیف سخت‌افزار Verilog را دارند. تمرکز ایشان در حال حاضر بر روی برنامه‌نویسی فرانت اند و توسعه سایت‌های SPA با کتابخانه React JS است. برنامه‌نویسی فرانت، تدریس و تولید محتوا در زمینه برنامه‌نویسی و طراحی سایت از زمینه‌های آموزشی و پژوهشی ایشان محسوب می‌شود.</textarea>
+        </div>
     </div>
 </body>
+<script src="./JS/app.js"></script>
 
 </html>
