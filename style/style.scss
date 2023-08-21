@@ -61,26 +61,27 @@
                 @include flex();
                 direction: rtl;
                 width: 90%;
+                height: 60px;
                 gap: 30px;
-                padding: 0 14px;
-                background-color: #fffaf4;
+                padding: 0 8px;
+                background-color: #f5eee4;
                 border-radius: 10px;
                 box-shadow: 2px 2px 5px #c1c1c1;
                 position: relative;
 
                 &-title {
-                    width: 60%;
+                    width: 70%;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    font-weight: 500;
+                    font-weight: 600;
                     cursor: default;
-                    padding-right: 10px;
                 }
 
                 &.vital {
                     border: 3px solid #c20000;
-                    box-shadow: 3px 3px 5px #f42e2e;
+                    border-right: none;
+                    box-shadow: -3px 3px 5px #f42e2e;
                 }
 
                 &.important {
@@ -117,11 +118,46 @@
 
                 // done status code end
 
-                .action-btn-box {
+                .fa-check {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 10px;
+                    color: #fff;
                     @include flex();
-                    width: 30%;
-                    height: 60px;
+                    cursor: pointer;
+                    position: absolute;
+                    right: -14px;
+                    top: 50%;
+                    transform: translateY(-50%) scale(.8);
+                    background: linear-gradient(30deg, #005818, #29a400);
+                }
+
+                .fa-cog {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 10px;
+                    color: #fff;
+                    @include flex();
+                    cursor: pointer;
+                    color: #370068;
+                    font-size: 22px;
+                    background-color: #ebebeb;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .action-btn-box {
+                    width: 150px;
+                    height: 45px;
+                    border-radius: 10px;
+                    position: absolute;
+                    left: 5px;
+                    bottom: 4px;
+                    @include flex();
                     gap: 10px;
+                    background-color: #ebebeb;
+                    padding: 2px 0;
+                    transform: scale(0);
 
                     i {
                         width: 30px;
@@ -131,24 +167,16 @@
                         @include flex();
                         cursor: pointer;
 
-                        &:nth-child(1) {
+                        &.fa-eye {
                             background: linear-gradient(30deg, $blue_50, $blue_30);
                         }
 
-                        &:nth-child(2) {
-                            background: linear-gradient(30deg, #005818, #29a400);
-                        }
-
-                        &:nth-child(3) {
-                            background: linear-gradient(30deg, #ff6200, #ffae00);
-                        }
-
-                        &:nth-child(4) {
-                            position: absolute;
-                            right: -14px;
-                            top: 50%;
-                            transform: translateY(-50%) scale(.8);
+                        &.fa-times {
                             background: linear-gradient(30deg, #e8001b, #c50000);
+                        }
+
+                        &.fa-pen {
+                            background: linear-gradient(30deg, #ff6200, #ffae00);
                         }
                     }
                 }
@@ -188,6 +216,7 @@
     backdrop-filter: blur(10px);
     @include flex();
     transition: .5s;
+    display: none;
 
     .new-task-info-container {
         width: 400px;
@@ -197,6 +226,22 @@
         @include flex(c);
         justify-content: flex-start;
         padding: 20px 0;
+        position: relative;
+
+        .close-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #d80000;
+            color: #fff;
+            @include flex();
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            font-size: 24px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
 
         .new-task-title {
             padding-bottom: 5px;
@@ -245,6 +290,7 @@
                 gap: 50px;
 
                 .box-title {
+                    cursor: default;
                     font-size: 22px;
                 }
 
@@ -298,11 +344,13 @@
                     }
                 }
             }
+
             .description-container {
                 width: 90%;
                 margin-top: 20px;
                 @include flex(c);
                 align-items: flex-start;
+                cursor: default;
                 direction: rtl;
 
                 .description-box {
@@ -316,6 +364,7 @@
                     outline: none;
                 }
             }
+
             .add-btn {
                 width: 200px;
                 height: 32px;

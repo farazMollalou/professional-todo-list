@@ -98,25 +98,26 @@ body {
   justify-content: center;
   direction: rtl;
   width: 90%;
+  height: 60px;
   gap: 30px;
-  padding: 0 14px;
-  background-color: #fffaf4;
+  padding: 0 8px;
+  background-color: #f5eee4;
   border-radius: 10px;
   box-shadow: 2px 2px 5px #c1c1c1;
   position: relative;
 }
 .todo-list-wrapper .body .task-list .task-title {
-  width: 60%;
+  width: 70%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 500;
+  font-weight: 600;
   cursor: default;
-  padding-right: 10px;
 }
 .todo-list-wrapper .body .task-list .task.vital {
   border: 3px solid #c20000;
-  box-shadow: 3px 3px 5px #f42e2e;
+  border-right: none;
+  box-shadow: -3px 3px 5px #f42e2e;
 }
 .todo-list-wrapper .body .task-list .task.important {
   border: 5px solid #ffcc00;
@@ -144,13 +145,50 @@ body {
   top: 50%;
   transform: rotate(-4deg) translateY(-50%);
 }
-.todo-list-wrapper .body .task-list .task .action-btn-box {
+.todo-list-wrapper .body .task-list .task .fa-check {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
-  height: 60px;
+  cursor: pointer;
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  background: linear-gradient(30deg, #005818, #29a400);
+}
+.todo-list-wrapper .body .task-list .task .fa-cog {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #370068;
+  font-size: 22px;
+  background-color: #ebebeb;
+  width: 40px;
+  height: 40px;
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box {
+  width: 150px;
+  height: 45px;
+  border-radius: 10px;
+  position: absolute;
+  left: 5px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+  background-color: #ebebeb;
+  padding: 2px 0;
+  transform: scale(0);
 }
 .todo-list-wrapper .body .task-list .task .action-btn-box i {
   width: 30px;
@@ -162,21 +200,14 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(1) {
+.todo-list-wrapper .body .task-list .task .action-btn-box i.fa-eye {
   background: linear-gradient(30deg, #000080, #1717e6);
 }
-.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(2) {
-  background: linear-gradient(30deg, #005818, #29a400);
-}
-.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(3) {
-  background: linear-gradient(30deg, #ff6200, #ffae00);
-}
-.todo-list-wrapper .body .task-list .task .action-btn-box i:nth-child(4) {
-  position: absolute;
-  right: -14px;
-  top: 50%;
-  transform: translateY(-50%) scale(0.8);
+.todo-list-wrapper .body .task-list .task .action-btn-box i.fa-times {
   background: linear-gradient(30deg, #e8001b, #c50000);
+}
+.todo-list-wrapper .body .task-list .task .action-btn-box i.fa-pen {
+  background: linear-gradient(30deg, #ff6200, #ffae00);
 }
 .todo-list-wrapper .footer {
   width: 100%;
@@ -214,6 +245,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: 0.5s;
+  display: none;
 }
 .modal-bg .new-task-info-container {
   width: 400px;
@@ -226,6 +258,23 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px 0;
+  position: relative;
+}
+.modal-bg .new-task-info-container .close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d80000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .modal-bg .new-task-info-container .new-task-title {
   padding-bottom: 5px;
@@ -273,6 +322,7 @@ body {
   gap: 50px;
 }
 .modal-bg .new-task-info-container .new-task-form .priority-box .box-title {
+  cursor: default;
   font-size: 22px;
 }
 .modal-bg .new-task-info-container .new-task-form .priority-box .priority-items {
@@ -331,6 +381,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
+  cursor: default;
   direction: rtl;
 }
 .modal-bg .new-task-info-container .new-task-form .description-container .description-box {
