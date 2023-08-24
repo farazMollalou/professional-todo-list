@@ -15,7 +15,7 @@
             <div class="options">
                 <i class="fa fa-filter"></i>
                 <i class="fa fa-search"></i>
-                <i class="fa fa-bell"></i>
+                <i class="fa fa-file-alt" id="daily_note_btn"></i>
             </div>
             <h1 class="header-title">لیست کارهای امروز من <i class="fa fa-list"></i></h1>
         </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="footer">
-            <i class="fa fa-file-alt" id="daily_note_btn"></i>
+            <i class="fa fa-archive"><span class="archive-badge">13</span></i>
             <i class="fa fa-plus" id="add_new_task_modal_btn"></i>
             <i class="fa fa-eraser"></i>
         </div>
@@ -83,7 +83,7 @@
             </form>
         </div>
 
-        <div class="modal_content daily-note">
+        <div class="modal_content global-note">
             <i class="close-btn fa fa-times modal_closer"></i>
             <img src="./image/note.png" alt="note">
             <h3 class="note-title">یادداشت امروز من</h3>
@@ -95,6 +95,16 @@
             </p>
             <textarea cols="30"
                 rows="10">فراز ملالو دانشجوی کارشناسی مهندسی کامپیوتر – نرم‌افزار از دانشگاه تبریز هستند. ایشان در سال‌های اخیر تجربه کار با زبان‌های برنامه‌نویسی جاوا و C و زبان توصیف سخت‌افزار Verilog را دارند. تمرکز ایشان در حال حاضر بر روی برنامه‌نویسی فرانت اند و توسعه سایت‌های SPA با کتابخانه React JS است. برنامه‌نویسی فرانت، تدریس و تولید محتوا در زمینه برنامه‌نویسی و طراحی سایت از زمینه‌های آموزشی و پژوهشی ایشان محسوب می‌شود.</textarea>
+        </div>
+
+        <div class="modal_content remove_confirm">
+            <i class="close-btn fa fa-times modal_closer"></i>
+            <img src="./image/question.png" alt="question">
+            <p class="modal_title">از بایگانی تسک مورد نظر مطمئن هستی؟</p>
+            <div class="btn-box">
+                <i class="fa fa-check"></i>
+                <i class="fa fa-times"></i>
+            </div>
         </div>
     </div>
 </body>
