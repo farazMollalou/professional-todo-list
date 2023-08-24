@@ -2,8 +2,12 @@
 const modals_list = document.querySelector('.modal-bg').children
 // modals DOM code 
 
-let selected_task_id = null
+const priority_items = document.querySelectorAll('.priority-item')
 
+// global variables
+let selected_task_id = null
+let newTaskPriority = "normal"
+// global variables
 
 function options_clk_handler(event) {
     let options_box = event.target.nextElementSibling
@@ -112,7 +116,7 @@ newTaskAddBtn.addEventListener("click", e => {
     newTask = {
         title: new_task_title.value,
         isCompleted: false,
-        priority: "normal",
+        priority: newTaskPriority,
         note: task_note.value,
         id: written_tasks.length
     }
@@ -127,6 +131,26 @@ newTaskAddBtn.addEventListener("click", e => {
     localStorage.setItem("today_list", JSON.stringify(daily_plan))
 
     window.location.reload()
+})
+
+priority_items.forEach((item, index) => {
+
+    item.addEventListener("click", () => {
+        for (let i = 0; i < 3; i++) {
+            priority_items[i].classList.remove("selected")
+            priority_items[i].children[0].classList.remove("fa-check")
+        }
+        priority_items[index].children[0].classList.add("fa-check")
+        priority_items[index].classList.add("selected")
+        
+        if (index === 0) {
+            newTaskPriority = "vital"
+        } else if (index === 1) {
+            newTaskPriority = "important"
+        } else {
+            newTaskPriority = "normal"
+        }
+    })
 })
 
 // add new task btn end
